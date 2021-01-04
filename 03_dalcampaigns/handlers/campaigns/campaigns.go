@@ -2,8 +2,8 @@ package campaigns
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/searchspring/go-basics/clients/render"
-	campaignsDAL "github.com/searchspring/go-basics/dals/campaigns"
+	"github.com/searchspring/go-and-di/clients/render"
+	campaignsDAL "github.com/searchspring/go-and-di/dals/campaigns"
 	"net/http"
 	"strconv"
 )

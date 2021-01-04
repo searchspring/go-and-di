@@ -2,7 +2,7 @@ package campaigns
 
 import (
 	"database/sql"
-	"github.com/searchspring/go-basics/clients/sscore"
+	"github.com/searchspring/go-and-di/clients/sscore"
 )
 
 type Deps struct {

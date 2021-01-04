@@ -3,9 +3,5 @@ package main // All executables have "package main" and "func main" as their ent
 import "fmt"
 
 func main() {
-	printToConsole("Hello World")
-}
-
-func printToConsole(input string) {
-	fmt.Println(input)
+	fmt.Println("Hello World")
 }

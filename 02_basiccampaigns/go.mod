@@ -1,4 +1,4 @@
-module github.com/searchspring/go-basics/jsonserver
+module github.com/searchspring/go-and-di
 
 go 1.15
 

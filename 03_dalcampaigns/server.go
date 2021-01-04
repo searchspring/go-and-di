@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/searchspring/go-basics/clients/render"
-	"github.com/searchspring/go-basics/clients/sscore"
-	"github.com/searchspring/go-basics/dals/campaigns"
-	campaignsHndl "github.com/searchspring/go-basics/handlers/campaigns"
+	"github.com/searchspring/go-and-di/clients/render"
+	"github.com/searchspring/go-and-di/clients/sscore"
+	"github.com/searchspring/go-and-di/dals/campaigns"
+	campaignsHndl "github.com/searchspring/go-and-di/handlers/campaigns"
 	renderLib "github.com/unrolled/render"
 	"net/http"
 	"strconv"
