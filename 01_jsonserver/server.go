@@ -3,14 +3,16 @@ package main
 import (
 	"github.com/unrolled/render"
 	"net/http"
+	"strconv"
 )
 
-var r *render.Render
+var renderer *render.Render
+const port = 8090
 
 func hello(w http.ResponseWriter, req *http.Request) {
 	response := map[string]string{"hello": "there"}
 
-	r.JSON(w, http.StatusOK, response)
+	renderer.JSON(w, http.StatusOK, response)
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -22,14 +24,14 @@ func headers(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 
-	r.JSON(w, http.StatusOK, response)
+	renderer.JSON(w, http.StatusOK, response)
 }
 
 func main() {
-	r = render.New()
+	renderer = render.New()
 
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/headers", headers)
 
-	http.ListenAndServe(":8090", nil)
+	http.ListenAndServe(":" + strconv.Itoa(port), nil)
 }

@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 )
 
+const port = 8090
+
 func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there\n")
+	fmt.Fprintln(w, "hello there")
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -18,9 +21,8 @@ func headers(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/headers", headers)
 
-	http.ListenAndServe(":8090", nil)
+	http.ListenAndServe(":" + strconv.Itoa(port), nil)
 }
